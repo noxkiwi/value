@@ -1,0 +1,45 @@
+{
+  "name": "noxkiwi/value",
+  "description": "I am the value object library. Just a collection of value objects that interact with validators.",
+  "version": "1.0.0",
+  "type": "package",
+  "license": "proprietary",
+  "keywords": [
+    "value",
+    "object",
+    "types",
+    "type safety",
+    "value object"
+  ],
+  "homepage": "https://nox.kiwi/",
+  "time": "2020-07-09",
+  "authors": [
+    {
+      "name": "Jan Nox",
+      "email": "jan.nox@pm.me",
+      "homepage": "https://nox.kiwi",
+      "role": "Lead Developer"
+    }
+  ],
+  "require": {
+    "php": ">=8.0.0",
+    "noxkiwi/core": "*",
+    "noxkiwi/validator": "*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^7"
+  },
+  "support": {
+    "email": "jan.nox@pm.me",
+    "issues": "https://nox.kiwi/issues",
+    "forum": "https://nox.kiwi/forum",
+    "wiki": "https://nox.kiwi/wiki",
+    "docs": "https://noxkiwi.atlassian.net/wiki",
+    "source": "https://waetjuzd747uthrv83pe7snpnrjca46c9zvp4dq8gvrvjyxnns7caaxy7gnefaay.nox.kiwi:4430/projects/RS/repos/Value/browse"
+  },
+  "autoload": {
+    "psr-4": {
+      "noxkiwi\\value\\": "backend/class/"
+    }
+  }
+}
