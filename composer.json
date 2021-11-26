@@ -3,7 +3,7 @@
   "description": "I am the value object library. Just a collection of value objects that interact with validators.",
   "version": "1.0.0",
   "type": "package",
-  "license": "proprietary",
+  "license": "GPL-3.0-or-later",
   "keywords": [
     "value",
     "object",
@@ -23,8 +23,8 @@
   ],
   "require": {
     "php": ">=8.0.0",
-    "noxkiwi/core": "*",
-    "noxkiwi/validator": "*"
+    "noxkiwi/core": "dev-master",
+    "noxkiwi/validator": "dev-master"
   },
   "require-dev": {
     "phpunit/phpunit": "^7"

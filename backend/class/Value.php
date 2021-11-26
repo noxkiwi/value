@@ -7,6 +7,7 @@ use noxkiwi\core\Exception\InvalidArgumentException;
 use noxkiwi\validator\Validator;
 use noxkiwi\value\Interfaces\ValueInterface;
 use function class_exists;
+use function str_replace;
 use const E_ERROR;
 use const E_WARNING;
 
