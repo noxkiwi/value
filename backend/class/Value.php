@@ -48,8 +48,8 @@ use const E_WARNING;
      */
     final public function __construct(mixed $value, array $options = null)
     {
-        $options ??= [];
-        $errors  = self::getValidator()->validate($value, $options);
+        $validator = self::getValidator($options);
+        $errors    = $validator->validate($value);
         if (! empty($errors)) {
             throw new InvalidArgumentException('EXCEPTION_CONSTRUCT_INVALID_DATA', E_WARNING, $errors);
         }
@@ -58,10 +58,13 @@ use const E_WARNING;
 
     /**
      * I will solely create the validator instance and return it.
+     *
+     * @param array $options
+     *
      * @throws \noxkiwi\core\Exception\InvalidArgumentException
      * @return \noxkiwi\validator\Validator
      */
-    private static function getValidator(): Validator
+    private static function getValidator(array $options = null): Validator
     {
         $validatorName = str_replace(['Value', 'value'], ['Validator', 'validator'], static::class);
         if (! class_exists($validatorName)) {
@@ -69,7 +72,10 @@ use const E_WARNING;
         }
         try {
             /** @var \noxkiwi\validator\Validator $validatorName */
-            return $validatorName::get()->reset();
+            $validator = $validatorName::get();
+            $validator->setOptions($options ?? []);
+
+            return $validator;
         } catch (Exception) {
             throw new InvalidArgumentException("Validator $validatorName was not found.", E_ERROR);
         }
