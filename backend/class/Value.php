@@ -64,7 +64,7 @@ use const E_WARNING;
      * @throws \noxkiwi\core\Exception\InvalidArgumentException
      * @return \noxkiwi\validator\Validator
      */
-    private static function getValidator(array $options = null): Validator
+    private static function getValidator(array $options): Validator
     {
         $validatorName = str_replace(['Value', 'value'], ['Validator', 'validator'], static::class);
         if (! class_exists($validatorName)) {
@@ -73,7 +73,7 @@ use const E_WARNING;
         try {
             /** @var \noxkiwi\validator\Validator $validatorName */
             $validator = $validatorName::get();
-            $validator->setOptions($options ?? []);
+            $validator->setOptions($options);
 
             return $validator;
         } catch (Exception) {
