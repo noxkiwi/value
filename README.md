@@ -4,6 +4,8 @@
 In 2016, during the hectic initial phase of our startup, we made a critical mistake that impacted several months of invoice provisions for our sales managers. We mistakenly applied the netToGross tax calculation for sales tax multiple times, even on already gross values, leading to significant errors.
 This issue went unnoticed for several months, causing considerable trouble. As a result, we developed two separate libraries to ensure valid values across all our platforms.
 
+The first commitment was to ensure valid parameters across the entire projects by creating the Value library. Then, as a logical conclusion, the next step was to implement a standard on how data has to be validated.
+
 ```php
 // The scenario is real, but this example is much simplified, of course.
 function netToGross(float $net): float {
@@ -53,3 +55,10 @@ In this example:
 The `getGrossFromNet` method converts a net value to a gross value by applying the sales tax, ensuring that the calculation is accurate and reliable.
 
 By using these Value objects, we ensure that our data is validated and consistent across our application, preventing errors like the ones we experienced in the past.
+
+
+## Let's Connect!
+If you're excited about the possibility of working together or simply want to discuss innovative ideas, I'd love to hear from you.
+Don't hesitate to reach out via [email](mailto:jan.nox@pm.me).
+
+Let's create something ***amazing*** together!
