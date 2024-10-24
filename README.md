@@ -1,4 +1,8 @@
 # Value - Ensuring Valid Data Across Your Project
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=noxkiwi_value&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=noxkiwi_value)
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=noxkiwi_value&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=noxkiwi_value)
+[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=noxkiwi_value&metric=ncloc)](https://sonarcloud.io/summary/new_code?id=noxkiwi_value)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=noxkiwi_value&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=noxkiwi_value)
 ## It Began With a Mistake
 
 In 2016, during the hectic initial phase of our startup, we made a critical mistake that impacted several months of invoice provisions for our sales managers. We mistakenly applied the netToGross tax calculation for sales tax multiple times, even on already gross values, leading to significant errors.
